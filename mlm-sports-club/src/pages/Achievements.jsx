@@ -79,6 +79,7 @@ export default function Achievements() {
     },
   ];
 
+
   return (
     <section className="relative min-h-screen overflow-hidden px-4 md:px-6 pt-32 pb-16">
       {/* Background Rings */}
@@ -101,38 +102,44 @@ export default function Achievements() {
           </h1>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {players.map((player) => (
-              <div
-                key={player.name}
-                className="h-[360px] overflow-hidden rounded-[28px] border border-white/20 bg-white/10 backdrop-blur-lg shadow-lg"
-              >
-                {/* Photo Section */}
-                <div className="flex h-44 items-center justify-center border-b border-white/20 bg-white/10">
-                  <span className="text-slate-400">
-                    Player Photo
-                  </span>
-                </div>
-
-                {/* Content */}
-                <div className="p-5">
-                  <h2 className="mb-3 text-xl font-semibold text-[#0b3046]">
-                    {player.name}
-                  </h2>
-
-                  <ul className="space-y-1 text-sm text-slate-700">
-                    {player.achievements.map((achievement) => (
-                      <li key={achievement}>
-                        {achievement}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-
-        </div>
+  {players.map((player) => (
+    <div
+      key={player.name}
+      className="h-[360px] overflow-hidden rounded-[28px] border border-white/20 bg-white/10 backdrop-blur-lg shadow-lg"
+    >
+      {/* Photo Section */}
+      <div className="flex h-44 items-center justify-center border-b border-white/20 bg-white/10">
+        <span className="text-slate-400">
+          Player Photo
+        </span>
       </div>
-    </section>
-  );
-}
+
+      {/* Content */}
+      <div className="p-5">
+        <h2 className="mb-3 text-xl font-semibold text-[#0b3046]">
+          {player.name}
+        </h2>
+
+        <ul className="space-y-1 text-sm text-slate-700">
+          {player.achievements.map((achievement) => (
+            <li key={achievement}>
+              {achievement}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  ))}
+</div>
+
+{/* And Many More Section */}
+<div className="mt-20 text-center">
+  <h2 className="text-5xl font-bold text-[#0b3046]">
+    And Many More Champions...
+  </h2>
+</div>
+
+</div>
+</div>
+</section>
+);}
