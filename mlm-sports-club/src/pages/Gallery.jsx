@@ -61,6 +61,7 @@ export default function Gallery() {
 
         </div>
       </div>
+      <footer className="py-8 text-center text-slate-500"> © 2026 MLM Sports Club. All Rights Reserved. </footer>
     </section>
   );
 }

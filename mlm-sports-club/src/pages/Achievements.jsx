@@ -110,7 +110,7 @@ export default function Achievements() {
       {/* Photo Section */}
       <div className="flex h-44 items-center justify-center border-b border-white/20 bg-white/10">
         <span className="text-slate-400">
-          Player Photo
+           Photo Coming Soon
         </span>
       </div>
 
@@ -138,8 +138,9 @@ export default function Achievements() {
     And Many More Champions...
   </h2>
 </div>
-
+<footer className="py-8 text-center text-slate-500"> © 2026 MLM Sports Club. All Rights Reserved. </footer>
 </div>
 </div>
 </section>
-);}
+);
+}

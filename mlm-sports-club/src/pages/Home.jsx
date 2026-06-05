@@ -26,16 +26,12 @@ export default function Home() {
           <img
             src={logo}
             alt="MLM Sports Club"
-            className="w-[150px] md:w-[230px] lg:w-[280px]"
+            className="w-[150px] md:w-[200px] lg:w-[250px]"
           />
 
           <h1 className="mt-6 text-3xl md:text-5xl font-bold text-[#0b3046]">
             MLM Sports Club
           </h1>
-
-          <p className="mt-4 text-lg text-slate-600">
-            Train. Compete. Excel.
-          </p>
         </div>
       </section>
 
@@ -86,6 +82,7 @@ export default function Home() {
 </div>
         </div>
     </section>
+    <footer className="py-8 text-center text-slate-500 bg-white"> © 2026 MLM Sports Club. All Rights Reserved. </footer>
   </>
 );
 }

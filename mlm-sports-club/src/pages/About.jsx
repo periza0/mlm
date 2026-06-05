@@ -69,9 +69,52 @@ export default function About() {
               Fuel Your Passion.
             </h2>
           </div>
+          <div className="mt-8 flex justify-center">
+  <a
+    href="mailto:mlmsportsclub0@gmail.com"
+    className="inline-block rounded-full bg-white px-8 py-3 font-semibold text-[#0b3046] transition hover:scale-105"
+  >
+    Sponsor Our Monthly Tournaments
+  </a>
+</div>
 
+          <div className="mt-16 text-center">
+             <h5 className="text-xl md:text-2xl font-bold text-[#0b3046]">
+              Stay Connected
+            </h5>
+
+  <p className="mt-3 text-slate-600">
+    Follow MLM Sports Club for training updates, tournament highlights,
+    achievements, and club events.
+  </p>
+
+  <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+    <a
+      href="https://instagram.com/mlmsportsclub"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 px-8 py-3 text-white font-semibold shadow-lg transition hover:scale-105"
+    >
+      Instagram
+    </a>
+
+    <a
+      href="https://facebook.com/MLMsportsclub/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="rounded-full bg-[#1877F2] px-8 py-3 text-white font-semibold shadow-lg transition hover:scale-105"
+    >
+      Facebook
+    </a>
+
+    
+    
+  </div>
+</div>
         </div>
       </div>
+      
+      <footer className="py-8 text-center text-slate-500"> © 2026 MLM Sports Club. All Rights Reserved. </footer>
     </section>
   );
 }
