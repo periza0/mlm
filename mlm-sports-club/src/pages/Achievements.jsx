@@ -2,6 +2,7 @@ export default function Achievements() {
   const players = [
     {
       name: "Dhruv Dutta",
+      image: "/players/dhruv.jpg",
       achievements: [
         "International Player",
         "North Zone Champion",
@@ -10,6 +11,7 @@ export default function Achievements() {
     },
     {
       name: "Nilesh Seth",
+      image: "/players/nilesh.jpg",
       achievements: [
         "International Player",
         "U-19 North Zone Winner",
@@ -20,6 +22,7 @@ export default function Achievements() {
     },
     {
       name: "Kritagya Arora",
+      image: "/players/kritagya.jpg",
       achievements: [
         "Best BAI Rank: 20",
         "Multiple-Time State Champion",
@@ -27,20 +30,31 @@ export default function Achievements() {
     },
     {
       name: "Akhil Arora",
+      image: "/players/akhil.jpg",
       achievements: [
-        "State Winner",
         "Best BAI Rank: 19",
+        "Multiple-Time State Champion",
       ],
     },
     {
       name: "Aradhya Singh",
+      image: "/players/aradhya.jpg",
       achievements: [
         "Best BAI Rank: 24",
-        "U-15 State Champion",
+        "Multiple-Time State Champion",
+      ],
+    },
+    {
+      name: "Sahib",
+      image: "/players/sahib.jpg",
+      achievements: [
+        "Best BAI Rank: 18",
+        "Multiple-Time State Champion",
       ],
     },
     {
       name: "Samaira Arora",
+      image: "/players/samaira.jpg",
       achievements: [
         "Best BAI Rank: 18",
         "Multiple-Time State Champion",
@@ -48,34 +62,33 @@ export default function Achievements() {
     },
     {
       name: "Kaivalya Sood",
+      image: "/players/kaivalya.jpg",
+      achievements: ["State Runner-Up"],
+    },
+    {
+      name: "Aarav Porwal",
+      image: "/players/aarav.jpg",
       achievements: ["State Runner-Up"],
     },
     {
       name: "Sonakshi",
+      image: "/players/sonakshi.jpg",
       achievements: ["State Second Runner-Up"],
     },
     {
-      name: "Aarav Porwal",
-      achievements: ["State Runner-Up"],
-    },
-    {
       name: "Mrinal Khurana",
+      image: "/players/mrinal.jpg",
       achievements: ["State Second Runner-Up"],
     },
     {
       name: "Ananya Sharma",
+      image: "/players/ananya.jpg",
       achievements: ["State Second Runner-Up"],
     },
     {
       name: "Toshan Mehra",
+      image: "/players/toshan.jpg",
       achievements: ["State Second Runner-Up"],
-    },
-    {
-      name: "Sahib",
-      achievements: [
-        "Best BAI Rank: 18",
-        "Multiple-Time State Champion",
-      ],
     },
   ];
 
@@ -107,12 +120,14 @@ export default function Achievements() {
       key={player.name}
       className="h-[360px] overflow-hidden rounded-[28px] border border-white/20 bg-white/10 backdrop-blur-lg shadow-lg"
     >
-      {/* Photo Section */}
-      <div className="flex h-44 items-center justify-center border-b border-white/20 bg-white/10">
-        <span className="text-slate-400">
-           Photo Coming Soon
-        </span>
-      </div>
+       {/* Photo Section */}
+         <div className="h-44 overflow-hidden border-b border-white/20">
+         <img
+         src={player.image}
+          alt={player.name}
+           className="h-full w-full object-cover"
+           />
+           </div>
 
       {/* Content */}
       <div className="p-5">
