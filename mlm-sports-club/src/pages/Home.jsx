@@ -26,7 +26,7 @@ export default function Home() {
         <img
           src={logo}
           alt="MLM Sports Club"
-          className="w-[180px] md:w-[260px] lg:w-[320px]"
+          className="w-[150px] md:w-[230px] lg:w-[280px]"
         />
 
         <h1 className="mt-6 text-3xl md:text-5xl font-bold text-[#0b3046]">
