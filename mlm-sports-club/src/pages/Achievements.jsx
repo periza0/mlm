@@ -1,11 +1,87 @@
 export default function Achievements() {
+  const players = [
+    {
+      name: "Dhruv Dutta",
+      achievements: [
+        "International Player",
+        "North Zone Champion",
+        "SGFI National Winner",
+      ],
+    },
+    {
+      name: "Nilesh Seth",
+      achievements: [
+        "International Player",
+        "U-19 North Zone Winner",
+        "Punjab State Rank Holder",
+        "Best BAI Rank: 15",
+        "SGFI National Winner",
+      ],
+    },
+    {
+      name: "Kritagya Arora",
+      achievements: [
+        "Best BAI Rank: 20",
+        "Multiple-Time State Champion",
+      ],
+    },
+    {
+      name: "Akhil Arora",
+      achievements: [
+        "State Winner",
+        "Best BAI Rank: 19",
+      ],
+    },
+    {
+      name: "Aradhya Singh",
+      achievements: [
+        "Best BAI Rank: 24",
+        "U-15 State Champion",
+      ],
+    },
+    {
+      name: "Samaira Arora",
+      achievements: [
+        "Best BAI Rank: 18",
+        "Multiple-Time State Champion",
+      ],
+    },
+    {
+      name: "Kaivalya Sood",
+      achievements: ["State Runner-Up"],
+    },
+    {
+      name: "Sonakshi",
+      achievements: ["State Second Runner-Up"],
+    },
+    {
+      name: "Aarav Porwal",
+      achievements: ["State Runner-Up"],
+    },
+    {
+      name: "Mrinal Khurana",
+      achievements: ["State Second Runner-Up"],
+    },
+    {
+      name: "Ananya Sharma",
+      achievements: ["State Second Runner-Up"],
+    },
+    {
+      name: "Toshan Mehra",
+      achievements: ["State Second Runner-Up"],
+    },
+    {
+      name: "Sahib",
+      achievements: [
+        "Best BAI Rank: 18",
+        "Multiple-Time State Champion",
+      ],
+    },
+  ];
+
   return (
-    <section className="relative min-h-screen overflow-hidden">
-
-      {/* Background */}
-      <div className="absolute inset-0 bg-[#f8f9fc]" />
-
-      {/* Large Rings */}
+    <section className="relative min-h-screen overflow-hidden px-4 md:px-6 pt-32 pb-16">
+      {/* Background Rings */}
       <div className="absolute top-[5%] left-[10%] md:left-[20%] h-[220px] w-[220px] md:h-[420px] md:w-[420px] rounded-full border-[30px] md:border-[55px] border-blue-500/15 blur-[20px]" />
 
       <div className="absolute top-[25%] left-[15%] md:left-[30%] h-[280px] w-[280px] md:h-[520px] md:w-[520px] rounded-full border-[35px] md:border-[65px] border-blue-600/20 blur-[25px]" />
@@ -18,13 +94,45 @@ export default function Achievements() {
 
       <div className="absolute -top-20 -left-20 md:-top-40 md:-left-40 h-[250px] w-[250px] md:h-[500px] md:w-[500px] rounded-full border-[20px] md:border-[40px] border-blue-400/20 blur-md" />
 
-      {/* Content */}
-      <div className="relative z-10 flex min-h-screen items-center justify-center">
-        <h1 className="text-4xl font-bold text-[#0b3046]">
-          Achievements
-        </h1>
-      </div>
+      <div className="relative z-10 mx-auto max-w-7xl">
+        <div className="rounded-[32px] border border-white/30 bg-white/15 backdrop-blur-xl p-6 md:p-10 shadow-xl">
+          <h1 className="mb-10 text-center text-3xl md:text-5xl font-bold text-[#0b3046]">
+            Achievements
+          </h1>
 
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {players.map((player) => (
+              <div
+                key={player.name}
+                className="h-[360px] overflow-hidden rounded-[28px] border border-white/20 bg-white/10 backdrop-blur-lg shadow-lg"
+              >
+                {/* Photo Section */}
+                <div className="flex h-44 items-center justify-center border-b border-white/20 bg-white/10">
+                  <span className="text-slate-400">
+                    Player Photo
+                  </span>
+                </div>
+
+                {/* Content */}
+                <div className="p-5">
+                  <h2 className="mb-3 text-xl font-semibold text-[#0b3046]">
+                    {player.name}
+                  </h2>
+
+                  <ul className="space-y-1 text-sm text-slate-700">
+                    {player.achievements.map((achievement) => (
+                      <li key={achievement}>
+                        {achievement}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </div>
     </section>
   );
 }
