@@ -24,6 +24,14 @@ export default function Achievements() {
       ],
     },
     {
+      name: "Seema Bhatia",
+      image: "/players/seema.jpg",
+      achievements: [
+        "International Silver Medalist",
+        "Punjab Champion",
+      ],
+    },
+    {
       name: "Kritagya Arora",
       image: "/players/kritagya.jpg",
       achievements: [
