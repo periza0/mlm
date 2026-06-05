@@ -1,12 +1,12 @@
 export default function Coaching() {
-    return (<section className="py-24 bg-periwinkleblue">
+    return (<section className="pt-40 pb-24 bg-periwinkleblue">
     <div className="max-w-6xl mx-auto px-6">
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold text-[#0b3046]">
           Coaching Programs
         </h2>
   
-  ```
+
     <p className="mt-4 text-lg text-slate-600">
       Structured training programs designed for beginners, intermediate players, and competitive athletes.
     </p>
