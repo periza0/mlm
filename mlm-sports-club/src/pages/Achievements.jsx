@@ -5,6 +5,17 @@ export default function Achievements() {
   const [selectedPlayer, setSelectedPlayer] = useState(null);
   const players = [
     {
+      name: "Nilesh Seth",
+      image: "/players/nilesh.jpg",
+      achievements: [
+        "International Player",
+        "U-19 North Zone Winner",
+        "Best BAI Rank: 15",
+        "SGFI National Winner",
+        "Senior State Champion"
+      ],
+    },
+    {
       name: "Dhruv Dutta",
       image: "/players/dhruv.jpg",
       achievements: [
@@ -13,22 +24,29 @@ export default function Achievements() {
         "SGFI National Winner",
       ],
     },
-    {
-      name: "Nilesh Seth",
-      image: "/players/nilesh.jpg",
-      achievements: [
-        "International Player",
-        "U-19 North Zone Winner",
-        "Best BAI Rank: 15",
-        "SGFI National Winner",
-      ],
-    },
+
     {
       name: "Seema Bhatia",
       image: "/players/seema.jpg",
       achievements: [
         "International Silver Medalist",
         "Punjab Champion",
+      ],
+    },
+    {
+      name: "Sahib",
+      image: "/players/sahib.jpg",
+      achievements: [
+        "Best BAI Rank: 18",
+        "Multiple-Time State Champion",
+      ],
+    },
+    {
+      name: "Samaira Arora",
+      image: "/players/samaira.jpg",
+      achievements: [
+        "Best BAI Rank: 18",
+        "Multiple-Time State Champion",
       ],
     },
     {
@@ -52,22 +70,6 @@ export default function Achievements() {
       image: "/players/aradhya.jpg",
       achievements: [
         "Best BAI Rank: 24",
-        "Multiple-Time State Champion",
-      ],
-    },
-    {
-      name: "Sahib",
-      image: "/players/sahib.jpg",
-      achievements: [
-        "Best BAI Rank: 18",
-        "Multiple-Time State Champion",
-      ],
-    },
-    {
-      name: "Samaira Arora",
-      image: "/players/samaira.jpg",
-      achievements: [
-        "Best BAI Rank: 18",
         "Multiple-Time State Champion",
       ],
     },

@@ -14,6 +14,8 @@ import img7 from "../assets/gallery/7.jpg";
 import img8 from "../assets/gallery/8.jpg";
 import img9 from "../assets/gallery/9.jpg";
 import img10 from "../assets/gallery/10.jpg";
+import img11 from "../assets/gallery/11.jpg";
+import img12 from "../assets/gallery/12.jpg";
 
 export default function Gallery() {
   const images = [
@@ -27,6 +29,8 @@ export default function Gallery() {
     img8,
     img9,
     img10,
+    img11,
+    img12,
   ];
 
   return (
@@ -43,7 +47,7 @@ export default function Gallery() {
             navigation
             loop={true}
             autoplay={{
-              delay: 4000,
+              delay: 3000,
               disableOnInteraction: false,
             }}
             className="rounded-[24px]"
