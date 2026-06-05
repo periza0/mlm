@@ -19,7 +19,6 @@ export default function Achievements() {
       achievements: [
         "International Player",
         "U-19 North Zone Winner",
-        "Punjab State Rank Holder",
         "Best BAI Rank: 15",
         "SGFI National Winner",
       ],
