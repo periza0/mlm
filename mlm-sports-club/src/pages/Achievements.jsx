@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 export default function Achievements() {
+  const [flippedCard, setFlippedCard] = useState(null);
+  const [selectedPlayer, setSelectedPlayer] = useState(null);
   const players = [
     {
       name: "Dhruv Dutta",
@@ -37,7 +41,7 @@ export default function Achievements() {
       ],
     },
     {
-      name: "Aradhya Singh",
+      name: "Aradhya Singhh",
       image: "/players/aradhya.jpg",
       achievements: [
         "Best BAI Rank: 24",
@@ -94,6 +98,7 @@ export default function Achievements() {
 
 
   return (
+
     <section className="relative min-h-screen overflow-hidden px-4 md:px-6 pt-32 pb-16">
       {/* Background Rings */}
       <div className="absolute top-[5%] left-[10%] md:left-[20%] h-[220px] w-[220px] md:h-[420px] md:w-[420px] rounded-full border-[30px] md:border-[55px] border-blue-500/15 blur-[20px]" />
@@ -113,35 +118,63 @@ export default function Achievements() {
           <h1 className="mb-10 text-center text-3xl md:text-5xl font-bold text-[#0b3046]">
             Achievements
           </h1>
-
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-  {players.map((player) => (
+  {players.map((player, index) => (
     <div
       key={player.name}
-      className="h-[360px] overflow-hidden rounded-[28px] border border-white/20 bg-white/10 backdrop-blur-lg shadow-lg"
+      onClick={() =>
+        setFlippedCard(flippedCard === index ? null : index)
+      }
+      className="relative h-[420px] cursor-pointer"
     >
-       {/* Photo Section */}
-         <div className="h-44 overflow-hidden border-b border-white/20">
-         <img
-         src={player.image}
-          alt={player.name}
-           className="h-full w-full object-cover"
-           />
-           </div>
+      <div
+        className={`relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] ${
+          flippedCard === index
+            ? "[transform:rotateY(180deg)]"
+            : ""
+        }`}
+      >
+        {/* Front */}
+        <div className="absolute inset-0 rounded-[28px] border border-white/20 bg-white/10 backdrop-blur-lg p-6 shadow-lg [backface-visibility:hidden]">
+          <h2 className="mb-4 text-2xl font-bold text-[#0b3046]">
+            {player.name}
+          </h2>
 
-      {/* Content */}
-      <div className="p-5">
-        <h2 className="mb-3 text-xl font-semibold text-[#0b3046]">
-          {player.name}
-        </h2>
+          <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-500">
+            Achievements
+          </h3>
 
-        <ul className="space-y-1 text-sm text-slate-700">
-          {player.achievements.map((achievement) => (
-            <li key={achievement}>
-              {achievement}
-            </li>
-          ))}
-        </ul>
+          <ul className="space-y-2 text-slate-700">
+            {player.achievements.map((achievement) => (
+              <li key={achievement}>
+                • {achievement}
+              </li>
+            ))}
+          </ul>
+
+          <p className="absolute bottom-6 left-6 text-xs text-slate-400">
+            Tap to view photo
+          </p>
+        </div>
+
+        {/* Back */}
+        <div className="absolute inset-0 rounded-[28px] border border-white/20 bg-white p-6 shadow-lg [transform:rotateY(180deg)] [backface-visibility:hidden]">
+          <div className="flex h-full flex-col items-center justify-center">
+            <img
+              src={player.image}
+              alt={player.name}
+              className="h-72 w-56 rounded-2xl object-cover shadow-lg"
+            />
+
+            <h2 className="mt-5 text-2xl font-bold text-[#0b3046]">
+              {player.name}
+            </h2>
+
+            <p className="mt-2 text-slate-500">
+              Tap again to go back
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   ))}
